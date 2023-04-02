@@ -150,6 +150,8 @@ MonoBehaviour:
   audioSource: {fileID: 2001234977}
   shootSound: {fileID: 8300000, guid: e4c0f08557f121a43be23b426dccd49b, type: 3}
   bulletLifetime: 3
+  spinSpeed: 500
+  bulletSpeed: 500
 --- !u!1 &590480242
 GameObject:
   m_ObjectHideFlags: 0
