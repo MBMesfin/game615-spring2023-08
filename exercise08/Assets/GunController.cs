@@ -20,7 +20,7 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(watermelonBullet, bulletSpawn.position, bulletSpawn.rotation);
+        GameObject bullet = Instantiate(watermelonBullet, bulletSpawn.position + new Vector3(0, 0.1f, 0), bulletSpawn.rotation);
         ParticleSystem trail = bullet.GetComponentInChildren<ParticleSystem>();
         trail.Play();
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed);
