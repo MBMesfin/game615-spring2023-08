@@ -21,19 +21,29 @@ public class AppleShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("w"))
+        //if (Input.GetKeyDown("w"))
+        //{
+        //    Shoot();
+        //    PlayShootSound();
+        //}
+
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
             PlayShootSound();
         }
     }
 
+
+
     void Shoot()
     {
 
+
+
         GameObject bullet2 = Instantiate(appleBullet, bulletSpawn.position + new Vector3(0, 0.1f, 0), bulletSpawn.rotation);
-        ParticleSystem trail2 = bullet2.GetComponentInChildren<ParticleSystem>();
-        trail2.Play();
+        //ParticleSystem trail2 = bullet2.GetComponentInChildren<ParticleSystem>();
+        //trail2.Play();
         bullet2.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed);
         bullet2.GetComponent<Rigidbody>().AddTorque(bullet2.transform.up * spinSpeed);
         Destroy(bullet2, bulletLifetime);
