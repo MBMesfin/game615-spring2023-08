@@ -7,3 +7,5 @@ Credit:
 Bullseye Target by Sean Tarrant [CC-BY] via Poly Pizza
 
 Pineapple by jeremy [CC-BY] via Poly Pizza
+
+Apple by Joe Arnold [CC-BY] via Poly Pizza
