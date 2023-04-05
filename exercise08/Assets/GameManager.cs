@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
                     selectedUnitGun = null;
 
-                    uiPanel.SetTrigger("gun selected");
+                    uiPanel.SetTrigger("gun nselected");
                 }
             }
         }
