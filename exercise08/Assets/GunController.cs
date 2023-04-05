@@ -12,7 +12,8 @@ public class GunController : MonoBehaviour
     public float bulletSpeed = 2000f;
     public bool selected = false; 
 
-    public GameObject pineappleBullet;
+    //public GameObject pineappleBullet;
+   // public GameObject appleBullet;
 
     public string gunName;
 
@@ -46,23 +47,9 @@ public class GunController : MonoBehaviour
             bullet.GetComponent<Rigidbody>().AddTorque(bullet.transform.up * spinSpeed);
             Destroy(bullet, bulletLifetime);
 
-            //gm.uiPanel.SetTrigger("uiPanelOn");
+        //gm.uiPanel.SetTrigger("uiPanelOn");
         //}
 
-
-        //GameObject bullet1 = Instantiate(pineappleBullet, bulletSpawn.position + new Vector3(0, 0.1f, 0), bulletSpawn.rotation);
-        //ParticleSystem trail1 = bullet1.GetComponentInChildren<ParticleSystem>();
-        //trail1.Play();
-        //bullet1.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed);
-        //bullet1.GetComponent<Rigidbody>().AddTorque(bullet1.transform.up * spinSpeed);
-        //Destroy(bullet1, bulletLifetime);
-
-        //GameObject bullet2 = Instantiate(appleBullet, bulletSpawn.position + new Vector3(0, 0.1f, 0), bulletSpawn.rotation);
-        //ParticleSystem trail2 = bullet2.GetComponentInChildren<ParticleSystem>();
-        //trail2.Play();
-        //bullet2.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward * bulletSpeed);
-        //bullet2.GetComponent<Rigidbody>().AddTorque(bullet2.transform.up * spinSpeed);
-        //Destroy(bullet2, bulletLifetime);
     }
     void PlayShootSound()
     {

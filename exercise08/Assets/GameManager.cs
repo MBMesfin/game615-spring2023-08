@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GunController selectedUnit;
+    public NameScript selectedUnitGun;
     public Animator uiPanel;
-    public TMP_Text theName;
+    public TMP_Text theNameText;
     void Start()
     {
         
@@ -20,17 +20,19 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-        
-                if (selectedUnit != null)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray) == false)
+            {
+                if (selectedUnitGun != null)
                 {
-                    selectedUnit.selected = false;
-                   // selectedUnit.bodyRend.material.color = selectedUnit.defaultColor;
+                    selectedUnitGun.selected = false;
+                    selectedUnitGun.bodyRend.material.color = selectedUnitGun.defaultColor;
 
-                    selectedUnit = null;
+                    selectedUnitGun = null;
 
-                    uiPanel.SetTrigger("uiPanelOff");
+                    uiPanel.SetTrigger("gun selected");
                 }
-            
+            }
         }
 
     }
