@@ -1,5 +1,11 @@
 # game615-spring2023-08
 
+Partners: Mikki | Yihua
+
+
+Instructions: select a gun to see the name and shoot fruit at the target! 
+
+
 Playable Link: 
 
 Credit: 
