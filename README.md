@@ -6,7 +6,7 @@ Partners: Mikki | Yihua
 Instructions: select a gun to see the name and shoot fruit at the target! 
 
 
-Playable Link: 
+Playable Link: https://mbmesfin.github.io/game615-spring2023-08/exercise08/play/
 
 Credit: 
 
