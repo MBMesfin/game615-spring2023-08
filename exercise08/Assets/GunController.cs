@@ -20,8 +20,8 @@ public class GunController : MonoBehaviour
 
     void Start()
     {
-        GameObject gmObj = GameObject.Find("GameManagerObject");
-        gm = gmObj.GetComponent<GameManager>();
+        //GameObject gmObj = GameObject.Find("GameManagerObject");
+        //gm = gmObj.GetComponent<GameManager>();
     }
 
     void Update()
@@ -46,7 +46,7 @@ public class GunController : MonoBehaviour
             bullet.GetComponent<Rigidbody>().AddTorque(bullet.transform.up * spinSpeed);
             Destroy(bullet, bulletLifetime);
 
-            gm.uiPanel.SetTrigger("uiPanelOn");
+            //gm.uiPanel.SetTrigger("uiPanelOn");
         //}
 
 
@@ -69,28 +69,28 @@ public class GunController : MonoBehaviour
         audioSource.PlayOneShot(shootSound);
     }
 
-    private void OnMouseDown()
-    {
+    //private void OnMouseDown()
+    //{
 
-        if (gm.selectedUnit != null)
-        {
-            // if we're here, something was already selected!
-            // 1. Deselect it
-            gm.selectedUnit.selected = false;
-            //gm.selectedUnit.bodyRend.material.color = gm.selectedUnit.defaultColor;
-        }
-        // 2. Select me!
-        selected = true;
-       // bodyRend.material.color = selectedColor;
+    //    if (gm.selectedUnit != null)
+    //    {
+    //        // if we're here, something was already selected!
+    //        // 1. Deselect it
+    //        gm.selectedUnit.selected = false;
+    //        //gm.selectedUnit.bodyRend.material.color = gm.selectedUnit.defaultColor;
+    //    }
+    //    // 2. Select me!
+    //    selected = true;
+    //   // bodyRend.material.color = selectedColor;
 
-        if (gm.selectedUnit == null)
-        {
-            gm.uiPanel.SetTrigger("uiPanelOn");
-        }
+    //    if (gm.selectedUnit == null)
+    //    {
+    //        gm.uiPanel.SetTrigger("uiPanelOn");
+    //    }
 
-        gm.selectedUnit = this;
+    //    gm.selectedUnit = this;
 
 
-       // gm.theName.text = gunName;
-    }
+    //   // gm.theName.text = gunName;
+    //}
 }
